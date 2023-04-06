@@ -1,0 +1,232 @@
+@mixin primary-btn($back_color,$color){
+    background-color: $back_color;
+    color: $color;
+    padding: 0.4rem 5rem;
+    font-weight: bold;
+    border-radius: 0.2rem;
+}
+
+@import "./abstracts/variables";
+@import "views/home";
+@import "views/order";
+@import "views/collect";
+@import "views/product";
+@import "views/cart";
+@import "views/checkout";
+@import "views/login";
+
+
+
+
+.main{
+    overflow: hidden;
+
+    &_header{
+        text-align: center;
+        padding: 0.6rem;
+        background: $main-color;
+        color: white;
+        font-weight: bolder;
+    }
+
+    &_cart{
+        color:$medium-gray
+    }
+
+    
+
+    //   ---------------- App.vue
+    .login{
+        &:hover .loginBtn{
+            display: block;
+            position: absolute;
+            right: 1.2%;
+            border: 1px solid gainsboro;
+            padding: 0.5% 1%;
+            background-color: white;
+
+            a{
+                color: rgba(84 ,84 ,84,.65);  
+            }
+        }
+    }
+
+    .loginBtn{
+        display: none;
+        
+        a{
+            margin: 10% 0;
+            display: inline-block;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    a{
+        color: rgba(0, 0, 0,.65);
+        text-decoration: none;
+
+        &:focus{
+            color: gray;
+        }
+    }
+
+    .log , .nav-link{
+        color: rgba(84, 84 ,84,.65);
+        padding:0.2rem 0.5rem 0.5rem 0.5rem;
+    }
+    .nav-item{
+        text-align: center;
+    }
+    nav i{
+        display: inherit;
+        font-size: 1.6rem;
+        color: $main-color;
+    }
+    .underline{
+        border: 1px solid gainsboro;
+        width: 100%;
+    }
+    .navbar-toggler{
+        border: none;
+        padding: 0;
+
+        &:focus{
+            border: none;
+            box-shadow: none;
+        }
+    }
+    .login_btn , .register_btn{
+        border-radius: 0.3rem;
+        padding: 1%;
+        font-weight: bolder;
+        text-align: center;
+        
+        &:not(.register_btn){
+            border: 1px solid $main-color;
+            color: $main-color;
+            background: none;
+        }
+
+        &:not(.login_btn){
+            background-color: $main-color;
+            border: none;
+            color: white;
+        }
+    }
+
+
+    //   ---------------- RWD
+    @media screen and (max-width: $media-extra-small){
+        .navbar-brand{
+            width: 100%;
+        }
+        .loginBtn{
+            width: 16%;
+        }
+        .phone_search_form{
+            width: 90%;
+            margin: auto;
+            margin-top: -1rem
+        }
+
+        //商品分類
+        .phone_list{
+            border-top: 1px solid $medium-gray;
+
+            &_type{
+                border-bottom: 1px solid $light-gray;
+                padding: 5px 0;
+
+            };
+
+            &_detail{
+                border: 1px solid $main-color;
+                color: $main-color;
+                padding: 1%;
+                border-radius: 0.3rem;
+                width: fit-content;
+            };
+
+            &_product{
+                margin: 2rem 0 0 1rem;
+                row-gap: 1rem;
+                text-align: center;
+                font-size: 0.8rem;
+
+                .col{
+                    padding: 0 2%;  
+                }
+            }
+
+            ul{
+                .selected{
+                    border: none;
+                    color: white;
+                    background-color: $main-color
+                }
+            }
+        }
+    }
+    
+    @media screen and (min-width: $media-small){
+        .search_form{
+            margin-right: auto;
+            width: 50%;
+        }
+        .loginBtn{
+            width: 5rem;
+        }
+    }
+
+
+
+    .fas.fa-heart{
+        color: $red;
+    }
+
+    .title_link{
+        margin-bottom:2rem;
+
+        .fa-location-dot , span{
+            display: inline;
+            color:$main-color;
+
+            &:not(.fa-location-dot){
+                cursor: pointer;
+            }
+        }
+    }
+
+    footer{
+        border-top: 4px solid $main-color;
+        background-color: #f3f3f3;
+        .container{
+            column-gap: 9vw;
+            justify-content: start;
+            padding: 3rem 1rem 3rem 1rem;
+            section{
+                span{
+                    column-gap: 5vw;
+                }
+                strong{
+                    font-size: 1.4rem;  
+                }
+                ul{
+                    margin-top: 1rem;
+                    list-style: none;
+                    padding: 0;
+    
+                    li{
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                        color: #565656;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

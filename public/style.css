@@ -1,0 +1,20 @@
+.home .list-group {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-radius: 0;
+  text-align: center;
+  font-weight: bold;
+  padding: 0 2vw; }
+  .home .list-group .col-2 {
+    padding: 1rem; }
+    .home .list-group .col-2:first-child {
+      background: #f4cd86;
+      color: #bc7b00; }
+    .home .list-group .col-2:hover {
+      color: #bc7b00; }
+
+.home .menu .d-flex {
+  padding: 0 2vw; }
+  .home .menu .d-flex .col-2 ul {
+    list-style: none;
+    background: #e1dddd; }

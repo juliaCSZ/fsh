@@ -1,0 +1,65 @@
+.collect_section{
+    .card{
+        //   ---------------- RWD
+        @media screen and (max-width: $media-extra-small){
+            .card-body{
+                .card-title , .card-text{
+                    padding: 0;
+                }
+            }
+        }
+        @media screen and (min-width: $media-extra-large){
+            width: 10vw;
+            height: 40vh;
+        }
+    
+        //   ----------------
+        .card-img-top{
+            cursor: pointer;
+            height:170px;
+            background-size: 100% 100%;
+        }
+
+        .tag{
+            background: #c94343;
+            color: white;
+            width: fit-content;
+            padding: 1% 5%;
+            font-weight: bold;
+        }
+
+        .card-body{
+            .card-text{
+                font-weight: bolder;
+                font-size: 18px;
+
+                .text-line{
+                    text-decoration: line-through;
+                    color: #adadad;
+                    font-size: 14px;
+                }
+            }
+
+            .card-title{
+                cursor: pointer;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            .collect{
+                align-items: end;
+                display: flex;
+                justify-content: end;
+                color: #b3b3b3;
+                font-size: 1.5rem;
+
+                .fa-heart{
+                    cursor: pointer;
+                }
+            }
+
+        }       
+    }
+}
